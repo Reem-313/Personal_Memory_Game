@@ -47,7 +47,11 @@ if(isset($_POST['submit']))
 <body>
     <div class="container card border-primary mb-3">
       <form method="post" action="" autocomplete="off">
-          <h2>Register Here</h2>
+        <div class="form-group mx-sm-3 mb-2">
+            <p>‘Personal memory game’ it is a matching pairs memory game where you can import any prefered personal photos to be used in the game. These photos can be 
+            photos of family members or venues/places of special occasions in your life.</p>
+        </div>
+          <h3>Sound interseting? Register Here to start playing!</h3>
           <div class="form-group mx-sm-3 mb-2">
         	<label for="firstName">first name:</label><br>
             <input type="text" id="firstName" name="firstName" required value=""><br>
