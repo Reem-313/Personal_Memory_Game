@@ -67,7 +67,8 @@ if(isset($_POST['submit']))
         </style>
         <div class="container card border-primary mb-3">
            <form method="post" action="" autocomplete="off">
-            	<h2>Login Here</h2>
+               <span>Welcome to 'Personal Memeory Game'</span>
+            	<h3>Please Login Here</h3>
             	<div class="form-group mx-sm-3 mb-2">
                 	<label for="email">Email:</label><br>
                     <input type="email" id="email" name="email" placeholder=""required value=""><br>
@@ -78,6 +79,9 @@ if(isset($_POST['submit']))
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
                      <input type="submit" name="submit" class="btn btn-primary btn-lg"><br>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <span> Don't have an account? </span><a href="registerpage.php"> Create one Here </a>
                 </div>
           </form>
       </div>
