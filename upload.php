@@ -49,8 +49,8 @@ if(isset($_POST["submit"])){
             ;
             }else
             {
-                        echo "Error: " . $query . ":-" . mysqli_error($conn);
-
+                echo "<script> alert('You are trying to upload Duplicated photo, please choose another one to upload'); </script>";
+                // echo "Error: " . $query . ":-" . mysqli_error($conn);
             }
         }
     }
@@ -92,7 +92,7 @@ if(isset($_POST["submit"])){
                   <h2> Please upload your photos here</h2>
             <form action="" class="" method="post" autocomplete="off" enctype="multipart/form-data">
                 <div class="form-group mx-sm-3 mb-2">
-                    <label for="name">Name : </label>
+                    <label for="name">Picture Description : </label>
                     <input type="text" name="name" id="name" required value=""><br>
                 </div>
                 <div class="form-group mx-sm-3 mb-2">
@@ -104,10 +104,17 @@ if(isset($_POST["submit"])){
                 </div>
             </form>
             <div class="form-group mx-sm-3 mb-2">
-                <a href="logout.php"> Logout </a><br>
+                <button onClick="location.href='preplaying.php'" type="button" class="btn btn-outline-primary btn-lg">Start Playing</button>
+            </div>
+                    
+            <div class="form-group mx-sm-3 mb-2">
+                <button onClick="location.href='welcome.php'" type="button" class="btn btn-outline-primary btn-lg">Go back to the welcome page</button>
             </div>
             <div class="form-group mx-sm-3 mb-2">
-                <a href= "data.php">View Your Image</a>
+                <button onClick="location.href='data.php'" type="button" class="btn btn-outline-primary btn-lg">View Your Images</button>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <a href="logout.php"> Logout </a><br>
             </div>
         </div>
     </body>
