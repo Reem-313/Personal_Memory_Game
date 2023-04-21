@@ -14,7 +14,6 @@ if(isset($_POST['submit']))
     $sql= "SELECT * FROM users WHERE email='$email' AND 
     password = '$password'";
     $result =mysqli_query($conn, $sql);
-    echo $result;
     $num = mysqli_num_rows($result);
       if ($num > 0) {
             echo "User already exist! Please login";
@@ -23,7 +22,8 @@ if(isset($_POST['submit']))
           $sqlU="INSERT into users (firstName, lastName, email, password) VALUES
      ('$firstName', '$lastName', '$email', '$password')";
      if (mysqli_query($conn, $sqlU)) {
-        echo "Registration done successfully!";
+         echo
+          "<script> alert('Registration done successfully!'); </script>";
      } 
      }
      
@@ -48,10 +48,10 @@ if(isset($_POST['submit']))
     <div class="container card border-primary mb-3">
       <form method="post" action="" autocomplete="off">
         <div class="form-group mx-sm-3 mb-2">
-            <p>‘Personal memory game’ it is a matching pairs memory game where you can import any prefered personal photos to be used in the game. These photos can be 
+            <p>‘Personal memory game’ it is a matching pairs memory game where you can import any preferred personal photos to be used in the game. These photos can be 
             photos of family members or venues/places of special occasions in your life.</p>
         </div>
-          <h3>Sound interseting? Register Here to start playing!</h3>
+          <h3>Sound interesting? Register here to start playing!</h3>
           <div class="form-group mx-sm-3 mb-2">
         	<label for="firstName">first name:</label><br>
             <input type="text" id="firstName" name="firstName" required value=""><br>
