@@ -31,7 +31,6 @@ else{
     <style>
     .container{
         padding: 25px;
-        margin:25px;
     }
 /* The grid: Three equal columns that floats next to each other */
 .column {
@@ -74,27 +73,27 @@ else{
 
 <!-- Three columns -->
                 <div class="container card border-primary mb-3">
-<div class="row">
-  <div class="column" onclick="openTab('b1');" style="background:#78a8bc;">
+<div class="row border border-dark">
+  <div class="column border border-dark" onclick="openTab('b1');" style="background:#78a8bc;">
     Step 1
   </div>
-  <div class="column" onclick="openTab('b2');" style="background:#bfdbde;">
+  <div class="column border border-dark" onclick="openTab('b2');" style="background:#bfdbde;">
     Step 2
   </div>
-  <div class="column" onclick="openTab('b3');" style="background:#ddb067;">
+  <div class="column border border-dark" onclick="openTab('b3');" style="background:#ddb067;">
     Step 3
   </div>
 </div>
 
 <!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:#78a8bc">
+<div id="b1" class="containerTab border border-dark" style="display:none;background:#78a8bc">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Setting up the game:</h2>
   <p>Please upload enough photos with description <a href="upload.php">here </a>to play the game, you would need to upload 6 photos to play the easy level, 8 photos to play the medium level, or 12 photos to play the hard level.
   The more photos you upload, the more interesting the game would be.</p>
 </div>
 
-<div id="b2" class="containerTab" style="display:none;background:#bfdbde">
+<div id="b2" class="containerTab border border-dark" style="display:none;background:#bfdbde">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Playing Memory:</h2>
   <p>This is how you play: you can choose a card from the displayed cards grid to turn it over. Then select another card and turn it over.
@@ -103,7 +102,7 @@ else{
   The game will track how many wrong cards you have flipped but no pressure as the main thing is for you to enjoy playing.</p>
 </div>
 
-<div id="b3" class="containerTab" style="display:none;background:#ddb067">
+<div id="b3" class="containerTab border border-dark" style="display:none;background:#ddb067">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Winning the Game:</h2>
   <p>Once all the matching pairs are found, you win the game! You may wish to terminate the game or play again.</p>
