@@ -9,7 +9,6 @@ else{
             exit();
 }
 
-
 if(isset($_POST['submit']))
 { 
         $imgID = $_POST['imgid'];
@@ -21,8 +20,5 @@ if(isset($_POST['submit']))
                     </script>";*/
                 header("location: data.php");
                }
-
-
-                    
 }
 ?>
