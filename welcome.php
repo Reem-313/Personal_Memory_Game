@@ -1,9 +1,10 @@
 <?php
-require 'dbconnection.php';
+//sources
 // Initialize the session
 //https://www.youtube.com/watch?v=kffivnAYUAY
-//https://w3schools.invisionzone.com/topic/57154-problem-with-user-registrtion-system/
 //https://www.w3schools.com/howto/howto_js_expanding_grid.asp
+require 'dbconnection.php';
+
 if (!empty($_SESSION['id'])) {
     $id= $_SESSION["id"];
     $result= mysqli_query($conn, "SELECT * FROM users WHERE userId=$id");
@@ -17,15 +18,15 @@ else{
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
- <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mainstyle.css">
-  <title>Home Page</title>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>Home Page</title>
 </head>
 <body>
     <style>
@@ -89,7 +90,7 @@ else{
 <div id="b1" class="containerTab border border-dark" style="display:none;background:#78a8bc">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
   <h2>Setting up the game:</h2>
-  <p>Please upload enough photos with description <a href="upload.php">here </a>to play the game, you would need to upload 6 photos to play the easy level, 8 photos to play the medium level, or 12 photos to play the hard level.
+  <p>Please upload enough photos with description to play the game, you would need to upload 6 photos to play the easy level, 8 photos to play the medium level, or 12 photos to play the hard level.
   The more photos you upload, the more interesting the game would be.</p>
 </div>
 
@@ -123,19 +124,15 @@ else{
                         <a href="logout.php"> Logout </a>
                     </div>
                 </div>
- <script>
-      function openTab(tabName) {
-  var i, x;
-  x = document.getElementsByClassName("containerTab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
- </script>            
-
-
-      
-
+     <script>
+              function openTab(tabName) {
+          var i, x;
+          x = document.getElementsByClassName("containerTab");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          document.getElementById(tabName).style.display = "block";
+        }
+     </script>            
 </body>
 </html
