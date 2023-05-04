@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL); ini_set('display_errors', 1);
+//sources
+//https://www.youtube.com/watch?v=NXAHkqiIepc
+//https://www.youtube.com/watch?v=kffivnAYUAY
 require 'dbconnection.php';
 if(!empty($_SESSION['id']))
 {
@@ -28,7 +32,6 @@ if(isset($_POST['submit']))
      }
      
      mysqli_close($conn);
-    
 }
 ?>
 
@@ -39,10 +42,10 @@ if(isset($_POST['submit']))
     <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="mainstyle.css">
-    <title>Store user input database</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>Create an account</title>
 </head>
 <body>
     <div class="container card border-primary mb-3">
@@ -80,5 +83,3 @@ if(isset($_POST['submit']))
   </div>
 </body>
 </html>
-
-
