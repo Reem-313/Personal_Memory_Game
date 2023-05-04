@@ -28,6 +28,7 @@ foreach($rows as $row) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=fit">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
@@ -43,15 +44,15 @@ foreach($rows as $row) {
 }
 
 body{
-    margin: 20px;
-    padding: 20px;
-    font-family: lexend;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: rgb(92, 167, 213);
+    font-family: lexend;
+    margin: 20px;
+    padding: 20px;
 }
 section{
     display: grid;
@@ -106,15 +107,10 @@ section{
   -ms-transform: translate(-50%,-50%);
 }
         </style>
-         <h1> Match the Photos! or  <a href="logout.php"> Logout </a></h1> 
-         <button id="restartbtn" type="button" onclick="restart()">Play Again</button>
-
-         <br>
+         <h1> Match the Photos! or  <a href="logout.php"> Logout </a></h1>
+        <button id="restartbtn" type="button" onclick="restart()" >Play Again</button>
 <h1>Clicks: <span> class="playerClicksCount</span></h1>
-        <div class="container card border-primary mb-3">
-
         <section></section>
-        </div>
         <div id="overlay" onclick="off()">
             <div id="text">congrats You Won!!</div>
         </div>
@@ -128,14 +124,14 @@ function off() {
   document.getElementById("overlay").style.display = "none";
                 document.getElementById("restartbtn").style.visibility = "visible"; 
 }
-      document.getElementById("restartbtn").style.visibility = "hidden"; 
+document.getElementById("restartbtn").style.visibility = "hidden"; 
 const section = document.querySelector("section");
 const playerClicksCount = document.querySelector("span");
 let clicksCount=0;
 let matched =0;
 //linking the clicks count to the page
 playerClicksCount.textContent = clicksCount;
-    let matchSound= new Audio('mixkit-casino-bling-achievement-2067.mp3');
+ let matchSound= new Audio('mixkit-casino-bling-achievement-2067.mp3');
     matchSound.volume= 0.1;
     let WrongSound = new Audio ('mixkit-game-ball-tap-2073.mp3');
 
@@ -203,12 +199,11 @@ const checkCards =(e) =>{
           card.style.pointerEvents= "none";
           });
          matched++;
-           // check if player won
           if(matched===6)
           {
               document.getElementById("restartbtn").style.visibility = "visible"; 
               on();
-          }
+             }
       }
       else{
           WrongSound.play();
@@ -243,7 +238,7 @@ const restart = () =>{
     clicksCount =0;
     matched=0;
     playerClicksCount.textContent = clicksCount;
-    document.getElementById("restartbtn").style.visibility = "hidden"; 
+        document.getElementById("restartbtn").style.visibility = "hidden"; 
 
 };
 
