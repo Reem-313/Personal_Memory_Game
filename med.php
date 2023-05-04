@@ -1,8 +1,11 @@
 <?php
-require 'dbconnection.php';
-// Initialize the session
+// sourceses 
+//https://www.w3schools.com/howto/howto_css_overlay.asp
 //https://www.youtube.com/watch?v=kffivnAYUAY
 //https://w3schools.invisionzone.com/topic/57154-problem-with-user-registrtion-system/
+
+// Initialize the session
+require 'dbconnection.php';
 if (!empty($_SESSION['id'])) {
     $id= $_SESSION["id"];
     $result= mysqli_query($conn, "SELECT * FROM users WHERE userId=$id");
@@ -25,10 +28,10 @@ foreach($rows as $row) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=fit">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
         <title>Memory Game</title>
     </head>
     <body>

@@ -1,8 +1,6 @@
 <?php
 require 'dbconnection.php';
 // Initialize the session
-//https://www.youtube.com/watch?v=kffivnAYUAY
-//https://w3schools.invisionzone.com/topic/57154-problem-with-user-registrtion-system/
 if (!empty($_SESSION['id'])) {
     $id= $_SESSION["id"];
     $result= mysqli_query($conn, "SELECT * FROM users WHERE userId=$id");
@@ -31,7 +29,7 @@ foreach($rows as $row) {
     <link rel="stylesheet" href="mainstyle.css">
   <title>Home Page</title>
 </head>
-<body>
+    <body>
                 <div class="container card border-primary mb-2">
                     <h2>Choose the level of the game you want to play</h2>
                     <div class="form-group mx-sm-3 mb-2">
@@ -42,6 +40,9 @@ foreach($rows as $row) {
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                         <button onclick="hardcheck()" class="btn btn-outline-primary btn-lg"> HARD </button><br>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <button onClick="location.href='welcome.php'" type="button" class="btn btn-outline-primary btn-lg">Go back to the previous page</button>
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
                         <a href="logout.php"> Or Logout Here </a>
