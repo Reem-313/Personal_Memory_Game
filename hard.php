@@ -25,9 +25,11 @@ foreach($rows as $row) {
 <!DOCTYPE html>
 <html>
     <head>
+        <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=fit">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
@@ -106,10 +108,10 @@ section{
   -ms-transform: translate(-50%,-50%);
 }
         </style>
-         <h1> Match the Photos! or  <a href="logout.php"> Logout </a>
-</h1>
-        <button id="restartbtn" type="button" onclick="restart()">Play Again</button>
-<br>
+                <br>
+         <h1> Match the Photos! or <button onClick="location.href='preplaying.php'" type="button" class="btn btn-outline-primary">Go Back</button> or
+         <button onClick="location.href='logout.php'" type="button" class="btn btn-outline-primary">Logout</button></h1>
+        <button id="restartbtn" type="button" onclick="restart()" type="button" class="btn btn-outline-primary">Play Again</button>
         <h1>Clicks: <span> class="playerClicksCount</span></h1>
         <section></section>
         <div id="overlay" onclick="off()">

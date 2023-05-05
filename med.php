@@ -107,8 +107,10 @@ section{
   -ms-transform: translate(-50%,-50%);
 }
         </style>
-         <h1> Match the Photos! or  <a href="logout.php"> Logout </a></h1>
-        <button id="restartbtn" type="button" onclick="restart()" >Play Again</button>
+        <br>
+         <h1> Match the Photos! or <button onClick="location.href='preplaying.php'" type="button" class="btn btn-outline-primary">Go Back</button> or
+         <button onClick="location.href='logout.php'" type="button" class="btn btn-outline-primary">Logout</button></h1>
+        <button id="restartbtn" type="button" onclick="restart()" type="button" class="btn btn-outline-primary">Play Again</button>
 <h1>Clicks: <span> class="playerClicksCount</span></h1>
         <section></section>
         <div id="overlay" onclick="off()">
